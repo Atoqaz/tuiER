@@ -1,0 +1,24 @@
+[package]
+name = "tuiER"
+version = "0.1.0"
+edition = "2021"
+description = "Interactive terminal ER diagram viewer for SQLite databases"
+
+[dependencies]
+anyhow = "1"
+ratatui = "0.29"
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+[profile.release]
+strip = true
+
+[[bin]]
+name = "tuier"
+path = "src/main.rs"
+
+[workspace.lints.rust]
+warnings = "deny"
+
+[workspace.lints.clippy]
+redundant_clone = "deny"
+unwrap_used = "deny"

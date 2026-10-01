@@ -1,0 +1,14 @@
+# Rust build output
+/target/
+
+# SQLite temp files left next to a database while it's open
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
